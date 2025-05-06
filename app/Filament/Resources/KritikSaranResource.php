@@ -20,9 +20,16 @@ use App\Filament\Resources\KritikSaranResource\RelationManagers;
 class KritikSaranResource extends Resource
 {
     protected static ?string $model = Kritik_saran::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationIcon = 'heroicon-o-inbox';
+    protected static ?string $navigationLabel = 'Kritik Saran';
+    public static function getModelLabel(): string
+    {
+        return 'Kritik Saran';
+    }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Kritik & Saran';
+    }
     public static function form(Form $form): Form
     {
         return $form

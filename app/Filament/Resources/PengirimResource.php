@@ -18,8 +18,13 @@ class PengirimResource extends Resource
 {
     protected static ?string $model = Pengirim::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static ?string $navigationLabel = 'User';
 
+    public static function getModelLabel(): string
+    {
+        return 'User';
+    }
     public static function form(Form $form): Form
     {
         return $form

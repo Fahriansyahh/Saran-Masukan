@@ -1,66 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Website Kritik dan Saran Pembayaran
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Proyek ini adalah sebuah aplikasi **Web Feedback** yang memungkinkan pengguna untuk memberikan **kritik dan saran** terkait dengan pembayaran. Website ini dibangun menggunakan **Laravel 11**, **TailwindCSS CDN** untuk bagian frontend (user), dan **Filament** untuk bagian admin panel.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ⚙️ Instalasi & Setup
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```bash
+# Clone repository
+git clone https://github.com/Fahriansyahh/Saran-Masukan.git
+cd KRITIK
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Install dependencies
+composer install
 
-## Learning Laravel
+# Salin file .env.example ke .env dan buat key aplikasi
+cp .env.example .env
+php artisan key:generate
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Setup Database
+php artisan migrate
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Jalankan server
+php artisan serve
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📦 Teknologi yang Digunakan
 
-## Laravel Sponsors
+- **Laravel 11** – Framework utama backend
+- **MySQL** – Database sistem
+- **Filament** – Admin panel dan manajemen data
+- **TailwindCSS CDN** – Styling frontend
+- **jQuery** – Interaktivitas frontend
+- **Laravel Debugbar** – Debugging dan profiling
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🧑‍💻 Fitur
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Pengguna (User):
+- Pengguna dapat mengisi form kritik dan saran terkait pembayaran.
+- Tampilan form responsif dengan menggunakan **TailwindCSS CDN**.
+- Mengirimkan saran atau kritik untuk ditinjau oleh admin.
 
-## Contributing
+### Admin:
+- Admin dapat melihat dan mengelola kritik dan saran melalui **Filament Admin Panel**.
+- Admin dapat menandai saran yang sudah ditanggapi atau diselesaikan.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📁 Struktur Proyek (Highlight)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- `/app` – Kode utama aplikasi
+- `/resources/views` – Blade Templates (Frontend)
+- `/public` – Folder untuk akses publik (gambar, assets)
+- `/routes/web.php` – Rute aplikasi
+- `/database/migrations` – Struktur database
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 📸 UI Tampilan
 
-## License
+### UI - User
+Formulir kritik dan saran dari pengguna.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![UI User - Kritik & Saran](public/images/form.png)
+![UI User - Kritik & Saran](public/images/form1.png)
+![UI User - Kritik & Saran](public/images/form2.png)
+
+### UI - Admin
+Halaman admin untuk melihat kritik dan saran yang diterima.
+
+![UI Admin - Kritik & Saran](public/images/admin/kel1.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel2.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel3.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel4.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel5.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel6.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel7.png)
+![UI Admin - Kritik & Saran](public/images/admin/kel8.png)
+
+---
+

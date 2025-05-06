@@ -25,8 +25,16 @@ class TransaksiResource extends Resource
 {
     protected static ?string $model = Transaksi::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
+    protected static ?string $navigationLabel = 'Status Transaksi';
+    public static function getModelLabel(): string
+    {
+        return 'Transaksi';
+    }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Kritik & Saran';
+    }
     public static function form(Form $form): Form
     {
         return $form

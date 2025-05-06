@@ -22,8 +22,17 @@ class MetodePembayaranResource extends Resource
 {
     protected static ?string $model = Metode_pembayaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
+    protected static ?string $navigationLabel = 'Metode Pembayaran';
+    public static function getModelLabel(): string
+    {
+        return 'Metode Pembayaran';
+    }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Layanan';
+    }
     public static function form(Form $form): Form
     {
         return $form

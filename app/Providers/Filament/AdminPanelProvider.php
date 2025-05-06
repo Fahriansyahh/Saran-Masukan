@@ -26,10 +26,14 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login()
+            ->login()->brandName('PT. DIGITAL KOMUNIKASI NUSANTARA')
             ->colors([
-                'primary' => Color::Amber,
-            ])
+                'primary' => '#3b82f6', // biru lembut (Tailwind blue-500)
+                'gray' => '#6b7280',    // abu (Tailwind gray-500)
+                'danger' => '#ef4444',  // merah lembut
+                'success' => '#10b981', // hijau lembut
+                'warning' => '#f59e0b', // kuning lembut
+            ])->sidebarWidth('18rem')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
